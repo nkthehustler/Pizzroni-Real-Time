@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzroni - Cart</title>
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="shortcut icon" href="/img/others/pizza.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body style="background-color: white">
+    <section class="cart-container">
+        <nav class="navbar">
+            <a href="/"><img src="./img/others/Pizzroni Logo.png" alt="" width="150px" class="logo"
+                    style="filter: brightness(0)" /></a>
+            <a href="/" class="Home black-style" style="color: black">Home</a>
+            <a href="" class="Offers black-style" style="color: black">Offers</a>
+            <a href="" class="Orders black-style" style="color: black">Orders</a>
+            <a href="/login" class="Login black-style" style="color: black">Login</a>
+            <div class="cart black-style">
+                <a href="/cart"><img src="img/others/cart_2.png" width="25px" alt="" /></a>
+            </div>
+        </nav>
+        <!-- <p class="cart-heading"> <span id="cart-empty">Empty Cart 🙁</span> <br> You probably haven't ordered a pizza yet. <br> To order a pizza please Add Items or go to the Homepage </p>
+        <img  class="cart-animation" src="/img/cart_animation.svg" alt="" width="410px">
+        <button type="button" id="back-btn">Add Items</button> -->
+        <div class="order active-container mx-auto w-1/2 py -10">
+            <div class="flex items-center border-b border-gray-300 pb-4">
+                <img src="/img/others/cart_2.png" alt="" width="28" />
+                <h1 class="font-bold ml-4 txt-2xl">Order Summary</h1>
+            </div>
+            <div class="pizza-list flex items-center my-8">
+                <div>
+                    <img class="rounded-lg" width="100" src="/img/menu/Pizza 1.jpg" alt="" />
+                </div>
+                <div class="flex-1 ml-4">
+                    <h1>Margherita</h1>
+                    <span>MEDIUM</span>
+                </div>
+                <span class="flex-1">1 Pcs</span>
+                <span class="font-bold text-lg">₹399</span>
+            </div>
+
+            <div class="pizza-list flex items-center my-8">
+                <div>
+                    <img class="rounded-lg" width="100" src="/img/menu/Pizza 2.jpg" alt="" />
+                </div>
+                <div class="flex-1 ml-4">
+                    <h1>Margherita</h1> 
+                    <span>MEDIUM</span>
+                </div>
+                <span class="flex-1">1 Pcs</span>
+                <span class="font-bold text-lg">₹399</span>
+            </div>
+            
+            <div class="pizza-list flex items-center my-8">
+                <div>
+                    <img class="rounded-lg" width="100" src="/img/menu/Pizza 2.jpg" alt="" />
+                </div>
+                <div class="flex-1 ml-4">
+                    <h1>Margherita</h1> 
+                    <span>MEDIUM</span>
+                </div>
+                <span class="flex-1">1 Pcs</span>
+                <span class="font-bold text-lg">₹399</span>
+            </div>
+
+               <hr>
+               <div class="text-right py-4">
+                <span class="text-lg font-bold">Total Amount:</span>
+                <span class="total-amt text-2xl font-bold ml-2">₹1197</span>
+                <div>
+                    <form action="" class="mt-12">
+                        <input class="border border-gray-400 p-2 w-1/2 mb-4 rounded-sm h-8" type="number" placeholder="Phone">
+                        <input class="border border-gray-400 p-2 w-1/2 mb-4 rounded-sm h-8" type="text" placeholder="Address">
+                       <div>
+                        <button type="submit" class="OrderNow-btn">Place Order</button>
+                       </div>
+                    </form>
+                </div>
+                <!-- <a href=""><button type="submit" class="OrderNow-btn">Login First!</button></a> -->
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
