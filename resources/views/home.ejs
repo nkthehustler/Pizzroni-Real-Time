@@ -40,166 +40,32 @@
   <h1 class="Menu-Heading">Menu</h1>
 
   <section class="Menu">
-    <div class="card-container card-1">
-      <div class="card">
-        <img src="/img/menu/Pizza 1.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Margherita</p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹299</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
+     
+    <%pizzas.forEach(function(pizza){ %>
+      <div class="card-container card-1">
+        <div class="card">
+          <img src="/img/menu/<%= pizza.image %>" alt="pizza" class="card-img" />
+        </div>
+        <div class="card-details">
+          <p id="item-tittle"><%= pizza.name %></p>
+          <select name="size" id="pizza-size">
+            <option value="small">S</option>
+            <option value="medium">M</option>
+            <option value="large">L</option>
+          </select>
+          <div class="card-base">
+            <span id="price">₹<%= pizza.price %></span>
+            <button data-pizza="<%= JSON.stringify(pizza) %>" type="button" class="add-to-cart">
+              <span>Add</span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="card-container card-2">
-      <div class="card">
-        <img src="/img/menu/Pizza 2.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Marianara</p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹399</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container card-3">
-      <div class="card">
-        <img src="/img/menu/Pizza 3.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Carbonara</p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹499</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container card-4">
-      <div class="card">
-        <img src="/img/menu/Pizza 5.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Americana</p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹799</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container card-5">
-      <div class="card">
-        <img src="/img/menu/Pizza 6.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Mashroom</p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹699</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container card-6">
-      <div class="card">
-        <img src="/img/menu/Pizza 7.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Italianiato<span></span></p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹599</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container card-7">
-      <div class="card">
-        <img src="/img/menu/Pizza 8.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Neapolitan</p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹499</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-container card-8">
-      <div class="card">
-        <img src="/img/menu/Pizza 4.jpg" alt="pizza" class="card-img" />
-      </div>
-      <div class="card-details">
-        <p id="item-tittle">Pepperino</p>
-        <select name="size" id="pizza-size">
-          <option value="small">S</option>
-          <option value="medium">M</option>
-          <option value="large">L</option>
-        </select>
-        <div class="card-base">
-          <span id="price">₹399</span>
-          <button type="button" id="add-btn">
-            <span>Add</span>
-          </button>
-        </div>
-      </div>
-    </div>
+   <% }) %>
+   <button type="submit" title="go to cart" onclick="location.href = '/cart';" class="total-cart">
+    <span class="cart-counter"><%= session.cart ? session.cart.totalQty: '0' %></span>
+    <img src="img/others/cart_1.png" alt="" width="18"></button>
   </section>
 </body>
-
+<script src="../js/app.js"></script>
 </html>

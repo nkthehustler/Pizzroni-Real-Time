@@ -1,0 +1,65 @@
+[{
+    "_id": {
+      "$oid": "5eee651f739f8c674fd736ee"
+    },
+    "name": "Margherita",
+    "image": "Pizza 1.jpg",
+    "price": "299",
+    "size": "small"
+  },{
+    "_id": {
+      "$oid": "5eee6671a27a66807cf2bea3"
+    },
+    "name": "Marinara",
+    "image": "Pizza 2.jpg",
+    "price": "399",
+    "size": "medium"
+  },{
+    "_id": {
+      "$oid": "5eee6692a27a66807cf2bea4"
+    },
+    "name": "Carbonara",
+    "image": "Pizza.jpg",
+    "price": "499",
+    "size": "small"
+  },{
+    "_id": {
+      "$oid": "5eee66a5a27a66807cf2bea5"
+    },
+    "name": "Americana",
+    "image": "Pizza 5.jpg",
+    "price": "799",
+    "size": "large"
+  },{
+    "_id": {
+      "$oid": "5eee66c4a27a66807cf2bea6"
+    },
+    "name": "Mushroom",
+    "image": "Pizza 6.jpg",
+    "price": "699",
+    "size": "medium"
+  },{
+    "_id": {
+      "$oid": "5eee66cfa27a66807cf2bea7"
+    },
+    "name": "Italianiato",
+    "image": "Pizza 7.jpg",
+    "price": "599",
+    "size": "small"
+  },{
+    "_id": {
+      "$oid": "5eee66eea27a66807cf2bea8"
+    },
+    "name": "Neapolitan",
+    "image": "Pizza 8.jpg",
+    "price": "499",
+    "size": "large"
+  },{
+    "_id": {
+      "$oid": "5eee6717a27a66807cf2bea9"
+    },
+    "name": "Pepperoni",
+    "image": "Pizza 4.jpg",
+    "price": "399",
+    "size": "medium"
+  }]

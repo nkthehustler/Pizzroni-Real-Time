@@ -1,475 +1,521 @@
 @import "./variables";
 @import "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Prata&display=swap";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 
 /* Navbar underline hover animations */
 /* Head */
 * {
-	margin: 0;
-	padding: 0%;
+  margin: 0;
+  padding: 0%;
 }
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 .container {
-	width: 100%;
-	height: 100vh;
-	background-image: url(/img/Hero2.png);
-	background-size: cover;
-	background-position: center;
-	position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/Hero2.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .navbar {
-	width: 90%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-	font-family: "Nunito", sans-serif;
-	font-weight: 600;
-	font-size: 18px;
-	z-index: 10;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  z-index: 10;
 }
 .logo {
-	margin-top: 30%;
-	margin-left: 80%;
-	cursor: pointer;
+  margin-top: 30%;
+  margin-left: 80%;
+  cursor: pointer;
 }
 .Home {
-	margin-left: 600px;
-	margin-top: 2.5%;
-	text-decoration: none;
-	cursor: pointer;
-	transition: 0.5s;
-	&:after {
-		content: "";
-		position: absolute;
-		left: 68.7%;
-		top: 75%;
-		width: 4.3%;
-		transform: scaleX(0);
-		height: 2px;
-		background-color: white;
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
-	&:hover {
-		&:after {
-			transform: scaleX(1);
-			transform-origin: bottom left;
-		}
-	}
+  margin-left: 600px;
+  margin-top: 2.5%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 68.7%;
+    top: 75%;
+    width: 4.3%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
 }
 .black-style {
-	&::after {
-		background-color: black !important;
-	}
+  &::after {
+    background-color: black !important;
+  }
 }
 .Offers {
-	margin-top: 2.5%;
-	text-decoration: none;
-	cursor: pointer;
-	&:after {
-		content: "";
-		position: absolute;
-		left: 76%;
-		top: 75%;
-		width: 4.5%;
-		transform: scaleX(0);
-		height: 2px;
-		background-color: white;
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
-	&:hover {
-		&:after {
-			transform: scaleX(1);
-			transform-origin: bottom left;
-		}
-	}
+  margin-top: 2.5%;
+  text-decoration: none;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 76%;
+    top: 75%;
+    width: 4.5%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
 }
 .Orders {
-	margin-top: 2.5%;
-	text-decoration: none;
-	cursor: pointer;
-	&:after {
-		content: "";
-		position: absolute;
-		left: 83.4%;
-		top: 75%;
-		width: 5%;
-		transform: scaleX(0);
-		height: 2px;
-		background-color: white;
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
-	&:hover {
-		&:after {
-			transform: scaleX(1);
-			transform-origin: bottom left;
-		}
-	}
+  margin-top: 2.5%;
+  text-decoration: none;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 83.4%;
+    top: 75%;
+    width: 5%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
 }
 .Login {
-	margin-top: 2.5%;
-	text-decoration: none;
-	cursor: pointer;
-	&:after {
-		content: "";
-		position: absolute;
-		left: 91.2%;
-		top: 75%;
-		width: 4.1%;
-		transform: scaleX(0);
-		height: 2px;
-		background-color: white;
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
-	&:hover {
-		&:after {
-			transform: scaleX(1);
-			transform-origin: bottom left;
-		}
-	}
+  margin-top: 2.5%;
+  text-decoration: none;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 91.2%;
+    top: 75%;
+    width: 4.1%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
 }
 .cart {
-	margin-top: 2.5%;
-	text-decoration: none;
-	cursor: pointer;
-	&:after {
-		content: "";
-		position: absolute;
-		left: 98%;
-		top: 75%;
-		width: 2.5%;
-		transform: scaleX(0);
-		height: 2px;
-		background-color: white;
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
-	&:hover {
-		&:after {
-			transform: scaleX(1);
-			transform-origin: bottom left;
-		}
-	}
+  margin-top: 2.5%;
+  text-decoration: none;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 98%;
+    top: 75%;
+    width: 2.5%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
 }
 .heading {
-	position: relative;
-	top: 30%;
-	width: 550px;
-	left: 10%;
-	color: white;
-	transform: translateY(-50%);
-	font-size: 24px;
-	line-height: 4rem;
-	letter-spacing: 5px;
-	font-family: "Prata", serif;
-	text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	z-index: 2;
+  position: relative;
+  top: 30%;
+  width: 550px;
+  left: 10%;
+  color: white;
+  transform: translateY(-50%);
+  font-size: 24px;
+  line-height: 4rem;
+  letter-spacing: 5px;
+  font-family: "Prata", serif;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 2;
 }
 .sub-heading {
-	position: relative;
-	top: 25%;
-	width: 550px;
-	left: 10%;
-	color: white;
-	transform: translateY(-50%);
-	font-size: 13px;
-	letter-spacing: 1px;
-	line-height: 4rem;
-	font-family: "Nunito", sans-serif;
-	text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	z-index: 2;
+  position: relative;
+  top: 25%;
+  width: 550px;
+  left: 10%;
+  color: white;
+  transform: translateY(-50%);
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 4rem;
+  font-family: "Nunito", sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 2;
 }
 .CTA {
-	width: 110px;
-	height: 40px;
-	position: absolute;
-	top: 70%;
-	left: 10%;
-	z-index: 10;
-	cursor: pointer;
-	font-size: 10.5px;
-	font-family: "Nunito", sans-serif;
-	font-weight: bolder;
-	letter-spacing: 1px;
-	text-align: center;
-	background: transparent;
-	outline: none;
-	color: white;
-	border: 2px solid white;
-	border-radius: 30px;
-	transition: 0.2s;
-	&:hover {
-		background: white;
-		color: black;
-	}
+  width: 110px;
+  height: 40px;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 10.5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-align: center;
+  background: transparent;
+  outline: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  transition: 0.2s;
+  &:hover {
+    background: white;
+    color: black;
+  }
 }
 .film {
-	width: 100%;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 .blur-film {
-	width: 50%;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	background: rgba(0, 0, 0, 0.3);
-	-webkit-backdrop-filter: blur(5px);
-	backdrop-filter: blur(5px);
-	z-index: 1;
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 1;
 }
 .icons {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	top: 80%;
-	left: 95%;
-	height: 100px;
-	justify-content: space-between;
-	z-index: 10;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80%;
+  left: 95%;
+  height: 100px;
+  justify-content: space-between;
+  z-index: 10;
 }
 .Menu {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 2%;
-	justify-content: space-evenly;
-	background-color: white;
-	height: 100vh;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-	font-family: "Nunito", sans-serif;
-	transform: scale(0.95);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 100vh;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  font-family: "Nunito", sans-serif;
+  transform: scale(0.95);
 }
 .Menu-Heading {
-	position: absolute;
-	display: inline-block;
-	transform: rotate(90deg);
-	top: 110%;
-	left: 1%;
-	width: 50px;
-	z-index: 10;
-	font-size: 50px;
-	font-weight: bold;
-	color: rgb(63, 63, 63);
-	font-family: "Nunito", sans-serif;
-	cursor: pointer;
-	transition: 0.2s;
-	&:hover {
-		text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	}
+  position: absolute;
+  display: inline-block;
+  transform: rotate(90deg);
+  top: 110%;
+  left: 1%;
+  width: 50px;
+  z-index: 10;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
 .card-container {
-	position: relative;
-	display: flex;
-	height: 300px;
-	width: 300px;
-	justify-items: center;
-	justify-content: center;
-	padding-top: 2%;
-	font-family: "Nunito", sans-serif;
-	font-weight: bold;
+  position: relative;
+  display: flex;
+  height: 300px;
+  width: 300px;
+  justify-items: center;
+  justify-content: center;
+  padding-top: 2%;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
 }
 .card {
-	height: 200px;
-	width: 200px;
-	border-radius: 15px;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	transition: 0.2s;
-	&:hover {
-		box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	}
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.2s;
+  &:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
 }
 .card-img {
-	border-radius: 15px;
-	height: 100%;
-	width: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
-	cursor: pointer;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  cursor: pointer;
 }
 .card-details {
-	position: absolute;
-	display: flex;
-	top: 73%;
-	width: 200px;
-	height: 30px;
-	color: rgb(63, 63, 63);
-	display: flex;
-	justify-content: flex-start;
-	padding-left: 25px;
-	font-family: "Nunito", sans-serif;
+  position: absolute;
+  display: flex;
+  top: 73%;
+  width: 200px;
+  height: 30px;
+  color: rgb(63, 63, 63);
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 25px;
+  font-family: "Nunito", sans-serif;
 }
 .card-base {
-	display: flex;
-	flex-direction: row-reverse;
-	position: absolute;
-	top: 90%;
-	width: 190px;
-	height: 30px;
-	justify-content: space-between;
-	color: rgb(63, 63, 63);
-	margin-top: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  top: 90%;
+  width: 190px;
+  height: 30px;
+  justify-content: space-between;
+  color: rgb(63, 63, 63);
+  margin-top: 15px;
 }
 #item-tittle {
-	font-size: 20px;
-	margin-top: 3px;
-	cursor: pointer;
+  font-size: 20px;
+  margin-top: 3px;
+  cursor: pointer;
 }
 #price {
-	font-size: 18px;
-	margin-top: 10px;
-	margin-right: 5px;
-	cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
 }
-#add-btn {
-	position: relative;
-	background: transparent;
-	color: rgb(63, 63, 63);
-	width: 65px;
-	height: 30px;
-	border: none;
-	border: orangered solid 1.7px;
-	font-size: 15px;
-	font-weight: 500;
-	letter-spacing: 0.5px;
-	border-radius: 50px;
-	margin-bottom: 15px;
-	cursor: pointer;
-	transition: 0.3s;
-	&:hover {
-		background-color: orangered;
-		color: white;
-		box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
-	}
+.add-to-cart {
+  position: relative;
+  background: transparent;
+  color: rgb(63, 63, 63);
+  width: 65px;
+  height: 30px;
+  border: none;
+  border: orangered solid 1.7px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: orangered;
+    color: white;
+    box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
+  }
 }
 #pizza-size {
-	position: relative;
-	top: 5%;
-	left: 30%;
-	height: 30px;
-	width: 30px;
-	margin-top: 3px;
-	border: none;
-	color: white;
-	border-radius: 50px;
-	font-size: 12px;
-	text-align: center;
-	background-color: darkgray;
-	cursor: pointer;
-	font-family: "Nunito", sans-serif;
-	font-weight: bold;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border: none;
-	transition: 0.2s;
-	&:hover {
-		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	}
+  position: relative;
+  top: 5%;
+  left: 30%;
+  height: 30px;
+  width: 30px;
+  margin-top: 3px;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  font-size: 12px;
+  text-align: center;
+  background-color: darkgray;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  transition: 0.2s;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
 .cart-container {
-	width: 100%;
-	height: 100vh;
-	background: white;
-	background-size: cover;
-	background-position: center;
-	position: relative;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .cart-animation {
-	position: relative;
-	left: 33%;
+  position: relative;
+  left: 33%;
 }
 #cart-empty {
-	font-size: 25px;
-	font-weight: bolder;
-	letter-spacing: 1px;
-	line-height: 1.3rem;
-	padding-bottom: 5px;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  line-height: 1.3rem;
+  padding-bottom: 5px;
 }
 .cart-heading {
-	position: relative;
-	font-family: "Nunito", sans-serif;
-	text-align: center;
-	letter-spacing: 0.5px;
-	line-height: 1.3rem;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.3rem;
 }
 #back-btn {
-	width: 110px;
-	height: 40px;
-	position: absolute;
-	top: 90%;
-	left: 45%;
-	z-index: 10;
-	cursor: pointer;
-	font-size: 13px;
-	font-family: "Nunito", sans-serif;
-	font-weight: bolder;
-	letter-spacing: 1px;
-	text-align: center;
-	background: transparent;
-	outline: none;
-	color: black;
-	border: orangered solid 2px;
-	border-radius: 30px;
-	transition: 0.2s;
-	&:hover {
-		background: orangered;
-		color: white;
-		border: orangered solid 2px;
-		box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
-	}
+  width: 110px;
+  height: 40px;
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-align: center;
+  background: transparent;
+  outline: none;
+  color: black;
+  border: orangered solid 2px;
+  border-radius: 30px;
+  transition: 0.2s;
+  &:hover {
+    background: orangered;
+    color: white;
+    border: orangered solid 2px;
+    box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
+  }
 }
 .active-container {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	position: relative;
-	margin-left: 15%;
-	margin-right: 15%;
-	font-family: "Nunito", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: "Nunito", sans-serif;
 }
 .total-amt {
-	color: orangered;
+  color: orangered;
 }
 .OrderNow-btn {
-	width: 110px;
-	height: 40px;
-	z-index: 10;
-	cursor: pointer;
-	font-size: 13px;
-	font-family: "Nunito", sans-serif;
-	font-weight: bolder;
-	letter-spacing: 1px;
-	text-align: center;
-	background: transparent;
-	outline: none;
-	color: black;
-	border: orangered solid 2px;
-	border-radius: 30px;
-	transition: 0.2s;
-	&:hover {
-		background: orangered;
-		color: white;
-		border: orangered solid 2px;
-		box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
-	}
+  width: 110px;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-align: center;
+  background: transparent;
+  outline: none;
+  color: black;
+  border: orangered solid 2px;
+  border-radius: 30px;
+  transition: 0.2s;
+  &:hover {
+    background: orangered;
+    color: white;
+    border: orangered solid 2px;
+    box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
+  }
 }
 .reg-btn {
-	color: black;
-	border: orangered solid 2px;
-	font-weight: bold;
-	&:hover {
-		background: orangered;
-		color: white;
-		border: orangered solid 2px;
-		box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
-	}
+  color: black;
+  border: orangered solid 2px;
+  font-weight: bold;
+  transition: 0.2s;
+  &:hover {
+    background: orangered;
+    color: white;
+    border: orangered solid 2px;
+    box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
+  }
+}
+
+.total-cart {
+  position: absolute;
+  left: 98.5%;
+  top: 93%;
+  padding-right: 10px;
+  padding-top: 3px;
+  background-color: orangered;
+  box-shadow: rgba(255, 98, 6, 0.3) 0px 3px 8px;
+  width: 55px;
+  height: 30px;
+  border: none;
+  border: orangered solid 1.7px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: right;
+}
+
+.cart-counter {
+  position: absolute;
+  left: 15%;
+  top: 24%;
+  color: white;
+}
+
+.noty_theme__mint.noty_type__success{
+        border-radius: 50px !important;
+		background-color: #59CE8F !important;
+		padding-left: 10px !important;
+		font-family: "Nunito", sans-serif !important; 
+}
+
+.noty_theme__mint.noty_type__error{
+        border-radius: 50px !important;
+		background-color: #FF8C32 !important;
+		padding-left: 10px !important;
+		font-family: "Nunito", sans-serif !important; 
 }
