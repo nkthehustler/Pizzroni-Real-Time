@@ -15,12 +15,19 @@
     <nav class="navbar">
       <a href=""><img src="./img/others/Pizzroni Logo.png" alt="" width="150px" class="logo" /></a>
       <a href="" class="Home" style="color: #ffff">Home</a>
-      <a href="" class="Offers" style="color: #ffff">Offers</a>
-      <a href="" class="Orders" style="color: #ffff">Orders</a>
-      <a href="/login" class="Login" style="color: #ffff">Login</a>
-      <div class="cart">
-        <a href="/cart"><img src="img/others/cart_1.png" width="25px" alt="" /></a>
-      </div>
+      <a href="/offers" class="Offers" style="color: #ffff">Offers</a>
+      <% if(user) { %>
+        <a href="/orders" class="Orders" style="color: #ffff">Orders</a>
+        <form id="logout" action="/logout" method="POST" class="Login">
+          <a onclick="document.getElementById('logout').submit()" href="#" style="color: #ffff" class="Login">Logout</a>
+        </form>
+        <% } else { %>
+          <a href="/register" class="Orders" style="color: #ffff">Register</a>
+          <a href="/login" class="Login" style="color: #ffff">Login</a>
+          <% } %>
+            <div class="cart">
+              <a href="/cart"><img src="img/others/cart_1.png" width="25px" alt="" /></a>
+            </div>
     </nav>
 
     <div class="heading">
@@ -30,7 +37,9 @@
     <div class="film"></div>
     <div class="blur-film"></div>
   </div>
-  <button type="button" class="CTA">ORDER NOW!</button>
+  <button onclick="document.location='#menu'" type="button" class="CTA">
+    ORDER NOW!
+  </button>
   <div class="icons">
     <a class="FB" href=""><img src="/img/icons/facebook.png" alt="" width="25px" /></a>
     <a class="YT" href=""><img src="/img/icons/youtube.png" alt="" width="25px" /></a>
@@ -39,19 +48,20 @@
 
   <h1 class="Menu-Heading">Menu</h1>
 
-  <section class="Menu">
-     
+  <section class="Menu" id="menu">
     <%pizzas.forEach(function(pizza){ %>
       <div class="card-container card-1">
         <div class="card">
           <img src="/img/menu/<%= pizza.image %>" alt="pizza" class="card-img" />
         </div>
         <div class="card-details">
-          <p id="item-tittle"><%= pizza.name %></p>
-          <select name="size" id="pizza-size">
-            <option value="small">S</option>
-            <option value="medium">M</option>
-            <option value="large">L</option>
+          <p id="item-tittle">
+            <%= pizza.name %>
+          </p>
+          <select name="size" id="pizza-size" title="size">
+            <option value="small" title="Small">S</option>
+            <option value="medium" title="Medium">M</option>
+            <option value="large" title="Large">L</option>
           </select>
           <div class="card-base">
             <span id="price">₹<%= pizza.price %></span>
@@ -61,11 +71,15 @@
           </div>
         </div>
       </div>
-   <% }) %>
-   <button type="submit" title="go to cart" onclick="location.href = '/cart';" class="total-cart">
-    <span class="cart-counter"><%= session.cart ? session.cart.totalQty: '0' %></span>
-    <img src="img/others/cart_1.png" alt="" width="18"></button>
+      <% }) %>
+        <button type="submit" title="go to cart" onclick="location.href = '/cart';" class="total-cart">
+          <span class="cart-counter">
+            <%= session.cart ? session.cart.totalQty: '0' %>
+          </span>
+          <img src="img/others/cart_1.png" alt="" width="18" />
+        </button>
   </section>
 </body>
 <script src="../js/app.js"></script>
+
 </html>
