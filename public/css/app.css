@@ -816,3 +816,13 @@ body {
   padding-left: 10px !important;
   font-family: "Nunito", sans-serif !important;
 }
+
+.orders {
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  font-family: "Nunito", sans-serif;
+}
+
+a.link {
+  color: orangered;
+}

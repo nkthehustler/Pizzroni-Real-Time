@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzroni - Cart</title>
+    <link rel="stylesheet" href="/css/app.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="/img/others/pizza.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body style="background-color: white">
+    <nav class="navbar">
+      <a href="/"
+        ><img
+          src="/img/others/Pizzroni Logo.png"
+          alt=""
+          width="150px"
+          class="logo"
+          style="filter: brightness(0)"
+      /></a>
+      <a href="/" class="Home black-style" style="color: black">Home</a>
+      <a href="/offers" class="Offers black-style" style="color: black"
+        >Offers</a
+      >
+      <% if(user) { %>
+      <a href="/customer/orders" class="Orders black-style" style="color: black"
+        >Orders</a
+      >
+      <form
+        id="logout"
+        action="/logout"
+        method="POST"
+        class="Login black-style"
+      >
+        <a
+          onclick="document.getElementById('logout').submit()"
+          href="#"
+          style="color: black"
+          class="Login"
+          >Logout</a
+        >
+      </form>
+      <% } else { %>
+      <a href="" class="Orders black-style" style="color: black">Register</a>
+      <a href="/login" class="Login black-style" style="color: black">Login</a>
+      <% } %>
+      <div class="cart black-style">
+        <a href="/cart"
+          ><img src="/img/others/cart_2.png" width="25px" alt=""
+        /></a>
+      </div>
+    </nav>
+<section class="orders light-section">
+  <div class="order_container mx-20 pt-12">
+    <h1 class="font-bold text-lg mb-4">All orders</h1>
+    <table class="w-full table-auto bg-white">
+      <thead>
+        <tr>
+          <th class="px-4 py-2 text-left">Orders</th>
+          <th class="px-4 py-2 text-left">Customer</th>
+          <th class="px-4 py-2 text-left">Address</th>
+          <th class="px-4 py-2 text-left">Status</th>
+          <th class="px-4 py-2 text-left">Time</th>
+          <th class="px-4 py-2 text-left">Payment</th>
+        </tr>
+      </thead>
+      <tbody id="orderTableBody">
+      </tbody>
+    </table>
+  </div>
+</section>
+  </body>
+  <script src="../../js/app.js"></script>
+</html>
+

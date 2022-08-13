@@ -14,12 +14,12 @@
 <body style="background-color: white">
     <section class="cart-container">
         <nav class="navbar">
-            <a href="/"><img src="./img/others/Pizzroni Logo.png" alt="" width="150px" class="logo"
+            <a href="/"><img src="/img/others/Pizzroni Logo.png" alt="" width="150px" class="logo"
                     style="filter: brightness(0)" /></a>
             <a href="/" class="Home black-style" style="color: black">Home</a>
             <a href="/offers" class="Offers black-style" style="color: black">Offers</a>
             <% if(user) { %>
-                <a href="/orders" class="Orders black-style" style="color: black">Orders</a>
+                <a href="/customer/orders" class="Orders black-style" style="color: black">Orders</a>
                 <form id="logout" action="/logout" method="POST" class="Login black-style">
                     <a onclick="document.getElementById('logout').submit()" href="#" style="color: black"
                         class="Login">Logout</a>
@@ -29,7 +29,7 @@
                     <a href="/login" class="Login black-style" style="color: black">Login</a>
                     <% } %>
                         <div class="cart black-style">
-                            <a href="/cart"><img src="img/others/cart_2.png" width="25px" alt="" /></a>
+                            <a href="/cart"><img src="/img/others/cart_2.png" width="25px" alt="" /></a>
                         </div>
         </nav>
 
@@ -62,21 +62,27 @@
                         <hr />
 
                         <div class="text-right py-4">
-                            <span class="text-lg font-bold">Total Amount:</span>
-                            <span class="total-amt text-2xl font-bold ml-2">₹<%= session.cart.totalprice %></span>
                             <div>
-                                <form action="" class="mt-12">
-                                    <input class="border border-gray-400 p-2 w-1/2 mb-4 rounded-sm h-8" type="number"
-                                        placeholder="Phone" />
-                                    <input class="border border-gray-400 p-2 w-1/2 mb-4 rounded-sm h-8" type="text"
-                                        placeholder="Address" />
+                                <span class="text-lg font-bold">Total Amount:</span>
+                                <span class="total-amt text-2xl font-bold ml-2">₹<%= session.cart.totalprice %></span>
+                            </div>
+                            <% if(user) { %>
+                            <div>
+                                <form action="/orders" method="POST" class="mt-12">
+                                    <input name="phone" class="border border-gray-400 p-2 w-1/2 mb-4 rounded-sm h-8" type="number"
+                                        placeholder="Phone" required=""/>
+                                    <input name="address" class="border border-gray-400 p-2 w-1/2 mb-4 rounded-sm h-8" type="text"
+                                        placeholder="Address" required=""/>
                                     <div>
                                         <button type="submit" class="OrderNow-btn">Place Order</button>
                                     </div>
                                 </form>
                             </div>
+                            <% } else { %>
+                              <a href="/login"><button type="submit" class="OrderNow-btn mt-10">Login First!</button></a>
                         </div>
-            </div>
+                        <% } %>
+             </div>
             <% } else { %>
                 <p class="cart-heading">
                     <span id="cart-empty">Empty Cart 🙁</span> <br />
@@ -87,9 +93,8 @@
                 <button onclick="document.location='/#menu'" type="button" type="button" id="back-btn">
                     Add Items
                 </button>
-                <!-- <a href=""><button type="submit" class="OrderNow-btn">Login First!</button></a> -->
                 <% } %>
     </section>
 </body>
-
+<script src="../../js/app.js"></script>
 </html>
