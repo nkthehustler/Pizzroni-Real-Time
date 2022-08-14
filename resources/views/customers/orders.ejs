@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizzroni - Cart</title>
+    <title>Pizzroni - Orders</title>
     <link rel="stylesheet" href="/css/app.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -84,7 +84,7 @@
                   <% orders.forEach((order) => { %>
                   <tr>
                       <td class="border px-4 py-2">
-                          <a class="link" href="/customer/orders/<%= order._id %>"><%= order._id %></a>
+                          <a class="link" title="click to track order" href="/customer/orders/<%= order._id %>"><%= order._id %></a>
                       </td>
                       <td class="border px-4 py-2">
                           <%= order.phone %>
@@ -107,5 +107,6 @@
       </div>
   </section>
   </body>
+  <script src="/socket.io/socket.io.js"></script>
   <script src="../../js/app.js"></script>
 </html>

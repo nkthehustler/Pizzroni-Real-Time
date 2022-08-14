@@ -10,6 +10,7 @@ const session = require("express-session");
 const flash = require("express-flash");
 const MongoDBStore = require("connect-mongo");
 const passport = require("passport");
+const Emitter = require("events");
 
 // Database connection
 mongoose.connect(process.env.MONGO_URL, {
@@ -24,6 +25,10 @@ connection.on("disconnected", function () {
 });
 connection.on("error", console.error.bind(console, "connection error:"));
 module.export;
+
+// Event emitter
+const eventEmitter = new Emitter();
+app.set("eventEmitter", eventEmitter);
 
 // Session config
 app.use(
@@ -67,6 +72,24 @@ app.set("views", path.join(__dirname, "./resources/views"));
 app.set("view engine", "ejs");
 
 // Server config
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}`);
 });
+
+// Socket
+const io = require("socket.io")(server);
+
+io.on("connection", (socket) => {
+  // Join the client eg. browser or mobile
+  socket.on("join", (orderId) => {
+    socket.join(orderId);
+  });
+});
+
+eventEmitter.on("orderUpdated", (data) => {
+  io.to(`order_${data.id}`).emit("orderUpdated", data);
+});
+
+eventEmitter.on('orderPlaced', (data) => {
+  io.to('adminRoom').emit('orderPlaced', data)
+})
