@@ -65,6 +65,9 @@ app.use((req, res, next) => {
 
 // Routes config
 require("./routes/web")(app);
+app.use((req,res)=>{
+    res.status(404).render('errors/404')
+})
 
 // Template engine config
 app.use(expressEJSLayouts);
