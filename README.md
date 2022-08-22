@@ -1,3 +1,7 @@
 # Pizzroni-Real-Time
-Pizzroni is a real-time pizza application based on web-sockets, MongoDb; Express; Nodejs
-![image width:100px](https://user-images.githubusercontent.com/66864065/185982912-dd84cbdf-9148-4593-8e29-1d75743be5da.png = 250x250)
+## Pizzroni is a real-time pizza application based on web-sockets, MongoDb; Express; Nodejs
+
+![image](https://user-images.githubusercontent.com/66864065/185983469-1c4511a4-85d7-4300-bf8e-f789e90e8ecf.png)
+
+
+
